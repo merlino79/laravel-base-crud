@@ -5,6 +5,7 @@
        <div class="row">
          <div class="col">
             <h1>new comic</h1>
+             <a href="{{ route('comics.index') }}">back</a>
          </div>
          <div class="row">
             <div class="col-8 offset-2 p-4">
