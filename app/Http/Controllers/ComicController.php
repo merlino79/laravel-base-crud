@@ -86,7 +86,13 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::find($id);
+        // dd($comic);
+        if ($comic) {
+          return view('comics.edit', compact('comic'));
+        }
+        abort(404, 'produt not found in database');
+       
     }
 
     /**

@@ -27,7 +27,9 @@
                   <td>
                     <a href="{{ route('comics.show', $comic) }}" class="btn btn-success">SHOW</a>
                   </td>
-                  <td>edit</td>
+                  <td>
+                    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary ">edit</a>
+                  </td>
                   <td>delete</td>
                 </tr>
               @endforeach

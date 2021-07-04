@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>{{ $comic->title }}</h1>
+       <h1>{{ $comic->title }} <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary">EDIT</a></h1>
       </div>
       <div class="my-3">
           <span class="badge bg-primary">{{ $comic->type }}</span>
