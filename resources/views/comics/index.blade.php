@@ -1,7 +1,13 @@
 @extends('layouts.main')
 @section('content')
-   
-     <h1>i miei fumetti</h1>
+   <div class="container">
+     <div class="row">
+       <div class="col text-center">
+           <h1>i miei fumetti</h1>
+       </div>
+     </div>
+   </div>
+    
       <section class="container">
           <table class="table">
             <thead>
