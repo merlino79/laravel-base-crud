@@ -51,22 +51,13 @@
 
                           
                           <button type="submit" class="btn btn-primary">Invia</button>
-                          <button type="reset" class="btn btn-secondary ">Reset</button>
+                         
 
               
 
                 
 
-            </form>
-
-              
-
-              
-              
-
-
-
-           
+                 </form>
             </div>
          </div>
          
