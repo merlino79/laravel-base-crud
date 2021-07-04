@@ -46,11 +46,11 @@ class ComicController extends Controller
         $new_comic->title = $data['title'];
         $new_comic->slug = Str::slug($data['title'], '-');
         $new_comic->description = $data['description'];
-        //$new_comic->thumb = $data['thumb'];
-        //$new_comic->price = $data['price'];
+        $new_comic->thumb = $data['thumb'];
+        $new_comic->price = $data['price'];
         $new_comic->series = $data['series'];
         // $new_comic->sale_date = $comic_item['sale_date'];
-        // $new_comic->type = $data['type'];
+         $new_comic->type = $data['type'];
 
          //dd($new_comic);
          // dd('====================');
