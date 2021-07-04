@@ -12,7 +12,7 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+        <img  class="img-fluid " src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
       </div>
       <div class="col-md-6">
         <p>{!! $comic->description !!}</p>

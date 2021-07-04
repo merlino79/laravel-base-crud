@@ -16,7 +16,7 @@ class ComicController extends Controller
     public function index()
     {
        // $comics = Comic::all();
-         $comics  = Comic::paginate(6);
+         $comics  = Comic::orderBy('id','desc')->paginate(6);
         //dd($comics);
         //passo il dato alla vista in maniera compatta
         return view('comics.index', compact('comics'));
@@ -43,17 +43,20 @@ class ComicController extends Controller
         $data = $request->all();
         //dd($data);
         $new_comic = new Comic();
-        $new_comic->title = $data['title'];
-        $new_comic->slug = Str::slug($data['title'], '-');
-        $new_comic->description = $data['description'];
-        $new_comic->thumb = $data['thumb'];
-        $new_comic->price = $data['price'];
-        $new_comic->series = $data['series'];
-        // $new_comic->sale_date = $comic_item['sale_date'];
-         $new_comic->type = $data['type'];
+        // $new_comic->title = $data['title'];
+        // $new_comic->slug = Str::slug($data['title'], '-');
+        // $new_comic->description = $data['description'];
+        // $new_comic->thumb = $data['thumb'];
+        // $new_comic->price = $data['price'];
+        // $new_comic->series = $data['series'];
+        // // $new_comic->sale_date = $comic_item['sale_date'];
+        //  $new_comic->type = $data['type'];
 
          //dd($new_comic);
          // dd('====================');
+        $data['slug'] =  Str::slug($data['title'], '-');
+        $new_comic->fill($data);
+        //dd($new_comic); 
         $new_comic->save();
         return redirect()->route('comics.show',$new_comic);
     }
